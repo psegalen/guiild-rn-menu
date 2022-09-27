@@ -4,8 +4,10 @@ import {
   StyleSheet,
   Text,
   StatusBar as rnStatus,
+  ScrollView,
 } from "react-native";
 import Menu from "./src/components/Menu";
+import Order from "./src/components/Order";
 import { AppContextProvider } from "./src/context/AppContext";
 
 export default function App() {
@@ -15,7 +17,19 @@ export default function App() {
         <Text style={styles.title}>
           Pas Framework JS Tour: React Native
         </Text>
-        <Menu />
+        <ScrollView
+          style={{
+            alignSelf: "stretch",
+            flex: 1,
+          }}
+          contentContainerStyle={{
+            alignItems: "center",
+            justifyContent: "flex-start",
+          }}
+        >
+          <Menu />
+          <Order />
+        </ScrollView>
         <StatusBar style="auto" />
       </SafeAreaView>
     </AppContextProvider>

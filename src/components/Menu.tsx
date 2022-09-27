@@ -17,9 +17,13 @@ const Menu: FC = () => {
     removeFromMenu(item);
   };
   return (
-    <View>
+    <View style={{ alignSelf: "stretch", paddingHorizontal: 16 }}>
       <Text
-        style={{ fontSize: 20, fontWeight: "bold", marginTop: 48 }}
+        style={{
+          fontSize: 20,
+          fontWeight: "bold",
+          marginTop: 48,
+        }}
       >
         Menu
       </Text>
@@ -33,7 +37,7 @@ const Menu: FC = () => {
           style={{
             borderWidth: 1,
             marginRight: 16,
-            width: "75%",
+            flex: 1,
             paddingHorizontal: 8,
           }}
           placeholder="New menu item"
